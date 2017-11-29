@@ -18,8 +18,8 @@ class discordbot:
     @client.event
     async def on_message(message):
         if message.content.startswith('!dw'):
-            mybusiness = business()
-            reply = mybusiness.dispatcher(message.content)
+            mybusiness = dispatcher()
+            reply = mybusiness.dispatcher(message)
             await discordbot.send_message(message.channel, reply)
     
     async def send_message(channel, message):
